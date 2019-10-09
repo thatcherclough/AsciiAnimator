@@ -1,0 +1,5 @@
+/target/
+/.settings/
+/.vscode/
+/*.jar
+.DS_Store
