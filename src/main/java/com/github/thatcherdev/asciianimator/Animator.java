@@ -14,14 +14,16 @@ public class Animator {
     private int wait;
 
     /**
-     * Construct a new Animator.
+     * Constructs a new Animator.
      * <p>
-     * Construct a new Animator and setup AnsiConsole to be used for cursor
-     * movement.
+     * Sets {@link #file} to the file with the name {@link inFile}, sets
+     * {@link #loop} to {@link inLoop}, sets {@link #wait} to {@link inWait}, and
+     * starts AnsiConsole using {@link AnsiConsole.systemInstall()} to be used for
+     * cursor movement.
      * 
      * @param inFile name of file with frames to animate
      * @param inLoop if animation should loop
-     * @param inWait milliseconds to wait before displaying next frame
+     * @param inWait milliseconds to wait before displaying each frame
      * @return
      */
     public Animator(String inFile, boolean inLoop, int inWait) {
@@ -32,10 +34,12 @@ public class Animator {
     }
 
     /**
-     * Start animator.
+     * Starts animator.
      * <p>
-     * Get lines from file {@link file}. Use {@link #animate(ArrayList<String>)} to
-     * start animation with these lines.
+     * Gets lines from file {@link #file} using {@link #getLines()}. Starts a loop
+     * that continuously uses {@link #animate(ArrayList<String>)} to animate
+     * {@link lines}, unless {@link #loop} is false, in which case the loop is only
+     * run once.
      * 
      * @throws FileNotFoundException
      * @throws InterruptedException
@@ -50,12 +54,12 @@ public class Animator {
     }
 
     /**
-     * Start animation of {@link #lines}.
+     * Starts stop motion animation of {@link lines}.
      * <p>
-     * Cycle though {@link #lines}. Either display line or move cursor to (0,0),
-     * wait {@link #wait} milliseconds, and clear screen.
+     * Cycles though {@link lines}. If line is "[frame]", moves cursor to (0,0),
+     * waits {@link #wait} milliseconds, and clears screen. Otherwise, prints line.
      * 
-     * @param lines lines from animation file
+     * @param lines lines to animate
      * @throws InterruptedException
      */
     private void animate(ArrayList<String> lines) throws InterruptedException {
@@ -71,9 +75,9 @@ public class Animator {
     }
 
     /**
-     * Get all lines from {@link #file}.
+     * Gets all lines from {@link #file}.
      * 
-     * @return ArrayList<String> lines from {@link #file}.
+     * @return ArrayList<String> of lines from {@link #file}
      * @throws FileNotFoundException
      */
     private ArrayList<String> getLines() throws FileNotFoundException {
