@@ -9,18 +9,18 @@ public class AsciiAnimator {
 	private static String file;
 	private static boolean loop;
 	private static int wait;
-	private static String help = "AsciiAnimator: A stop motion ASCII art animator (1.0.0)\n\nUsage:\n\tjava -jar asciianimator.jar [-h] [-v] [-f FILE -l BOOLEAN -fps INTEGER]\n\n"
-			+ "Arguments:\n\t-h, --help\t\t\tDisplay this message.\n\t-v, --version\t\t\tDisplay current version.\n\t-f, --file\t\t\tSpecify file to use for animation. (See README for syntax)\n"
-			+ "\t-l, --loop\t\t\tSpecify if the animation should loop. (Set to false if not specified)\n\t-fps, --frames-per-second\tSpecify FPS for animation. (Must be an integer greater than 0)\n\n"
+	final private static String help = "AsciiAnimator: A stop motion ASCII art animator (1.0.1)\n\nUsage:\n\tjava -jar asciianimator.jar [-h] [-v] [-f FILE -l BOOLEAN -fps INTEGER]\n\n"
+			+ "Arguments:\n\t-h, --help\t\t\tDisplay this message.\n\t-v, --version\t\t\tDisplay current version.\n\t-f, --file\t\t\tSpecify file to use for animation. (See README.md for syntax)\n"
+			+ "\t-l, --loop\t\t\tSpecify if the animation should loop. (Set to false by default)\n\t-fps, --frames-per-second\tSpecify FPS for animation. (Must be an integer greater than 0)\n\n"
 			+ "Note: When running, CTRL + C can be used to terminate.";
-	private static Thread clear = new Thread() {
+	final private static Thread clear = new Thread() {
 		public void run() {
 			System.out.print(Ansi.ansi().eraseScreen().cursor(0, 0).reset());
 		}
 	};
 
 	/**
-	 * Start AsciiAnimator with given {@link args}.
+	 * Starts AsciiAnimator based on command line arguments {@link args}.
 	 * 
 	 * @param args command line arguments
 	 */
