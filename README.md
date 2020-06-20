@@ -42,16 +42,17 @@ Alternatively, you can download the jar from the [release page](https://github.c
 ## Usage
 ```
 java -jar asciianimator.jar
-AsciiAnimator: A stop motion ASCII art animator (1.0.0)
+AsciiAnimator: A stop motion ASCII art animator (1.1.0)
 
 Usage:
-	java -jar asciianimator.jar [-h] [-v] [-f FILE -l BOOLEAN -fps INTEGER]
+	java -jar asciianimator.jar [-h] [-v] [-f FILE -l BOOLEAN -c BOOLEAN -fps INTEGER]
 
 Arguments:
 	-h, --help			Display this message.
 	-v, --version			Display current version.
 	-f, --file			Specify file to use for animation. (See README.md for syntax)
 	-l, --loop			Specify if the animation should loop. (Set to false by default)
+	-c, --clear			Specify if screen should be cleared after every frame. (Should be set to true if the frames have different lengths)
 	-fps, --frames-per-second	Specify FPS for animation. (Must be an integer greater than 0)
 
 Note: When running, CTRL + C can be used to terminate.
@@ -84,4 +85,4 @@ An example of a valid animation file can be found in src/main/resources/.
 
 ## License
 - [MIT](https://choosealicense.com/licenses/mit/)
-- Copyright 2019 ©️ ThatcherDev.
+- Copyright 2020 © ThatcherDev.

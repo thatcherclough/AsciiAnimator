@@ -10,6 +10,7 @@ import org.fusesource.jansi.AnsiConsole;
 
 public class Animator {
 
+	public boolean stop = false;
 	private final File file;
 	private final boolean loop;
 	private final boolean clear;
@@ -48,7 +49,7 @@ public class Animator {
 		ArrayList<String> lines = getLines();
 		while (true) {
 			animate(lines);
-			if (!loop)
+			if (!loop || stop)
 				break;
 		}
 	}
@@ -64,7 +65,9 @@ public class Animator {
 	 */
 	private void animate(ArrayList<String> lines) throws InterruptedException {
 		for (String line : lines) {
-			if (line.startsWith("[frame]")) {
+			if (stop)
+				break;
+			else if (line.startsWith("[frame]")) {
 				System.out.print(Ansi.ansi().cursor(0, 0));
 				Thread.sleep(wait);
 				if (clear)
