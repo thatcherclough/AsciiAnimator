@@ -1,5 +1,7 @@
 /target/
-/.settings/
-/.vscode/
 /*.jar
 .DS_Store
+.idea
+*.iws
+*.iml
+*.ipr
