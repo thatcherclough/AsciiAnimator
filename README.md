@@ -4,7 +4,7 @@ AsciiAnimator is a stop motion ASCII art animator.
 ## Features
 AsciiAnimator uses plain text files and stop motion to animate ASCII art frame by frame.
 
-See [syntax](https://github.com/ThatcherDev/AsciiAnimator#syntax) for animation file syntax.
+See [syntax](https://github.com/thatcherclough/AsciiAnimator#syntax) for animation file syntax.
 
 ## Demo
 <a href="https://asciinema.org/a/wZ8jpm9NfuRTgC8pz8bwTYpD1" target="_blank"><img src="https://asciinema.org/a/wZ8jpm9NfuRTgC8pz8bwTYpD1.svg" width="600"/></a>
@@ -20,7 +20,7 @@ AsciiAnimator is compatible with Windows, Mac, and Linux.
 ## Installation
 ```
 # clone AsciiAnimator
-git clone https://github.com/ThatcherDev/AsciiAnimator.git
+git clone https://github.com/thatcherclough/AsciiAnimator.git
 
 # change the working directory to AsciiAnimator
 cd AsciiAnimator
@@ -37,7 +37,7 @@ chmod +x mvnw
 sh mvnw clean package
 ```
 
-Alternatively, you can download the jar from the [release page](https://github.com/ThatcherDev/AsciiAnimator/releases).
+Alternatively, you can download the jar from the [release page](https://github.com/thatcherclough/AsciiAnimator/releases).
 
 ## Usage
 ```
@@ -85,4 +85,4 @@ An example of a valid animation file can be found in src/main/resources/.
 
 ## License
 - [MIT](https://choosealicense.com/licenses/mit/)
-- Copyright 2020 © ThatcherDev.
+- Copyright 2020 © Thatcher Clough.

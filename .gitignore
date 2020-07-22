@@ -1,7 +1,5 @@
 /target/
-/*.jar
 .DS_Store
-.idea
-*.iws
-*.iml
-*.ipr
+/*.jar
+/.idea/
+AsciiAnimator.iml

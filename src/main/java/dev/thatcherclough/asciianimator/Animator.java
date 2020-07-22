@@ -1,4 +1,4 @@
-package com.github.thatcherdev.asciianimator;
+package dev.thatcherclough.asciianimator;
 
 import java.io.File;
 import java.io.FileNotFoundException;
