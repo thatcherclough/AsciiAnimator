@@ -1,4 +1,4 @@
-package com.github.thatcherdev.asciianimator;
+package dev.thatcherclough.asciianimator;
 
 import org.fusesource.jansi.Ansi;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,7 +11,7 @@ public class AsciiAnimator {
 	private static boolean loop = false;
 	private static boolean clear = true;
 	private static int wait;
-	final private static String help = "AsciiAnimator: A stop motion ASCII art animator (1.1.0)\n\nUsage:\n\tjava -jar asciianimator.jar [-h] [-v] [-f FILE -l BOOLEAN " +
+	final private static String help = "AsciiAnimator: A stop motion ASCII art animator (1.1.1)\n\nUsage:\n\tjava -jar asciianimator.jar [-h] [-v] [-f FILE -l BOOLEAN " +
 			"-c BOOLEAN -fps INTEGER]\n\nArguments:\n\t-h, --help\t\t\tDisplay this message.\n\t-v, --version\t\t\tDisplay current version.\n\t-f, --file\t\t\tSpecify file" +
 			" to use for animation. (See README.md for syntax)\n\t-l, --loop\t\t\tSpecify if the animation should loop. (Set to false by default)\n\t-c, --clear" +
 			"\t\t\tSpecify if screen should be cleared after every frame. (Should be set to true if the frames have different lengths)\n\t-fps, " +
